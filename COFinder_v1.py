@@ -23,7 +23,7 @@ import argparse
 
 ########################################################################################################################
 ########################################################################################################################
-#AUXILIAR AND MODYFYNG DATA FUNCTIONS
+#AUXILIAR AND MODIFYING DATA FUNCTIONS
 ########################################################################################################################
 ########################################################################################################################
 # Function to format time and print
@@ -208,7 +208,7 @@ def check_len(tested_seq_len, fixed_len):
 #LOADING AA SEQUENCES
 ########################################################################################################################
 ########################################################################################################################
-# Parallel processing (PP) sequence parsing function to increase the analysis spped
+# Parallel processing (PP) sequence parsing function to increase the analysis sped
 def do_parallel_ident_parsing(record_batch_list):
     with concurrent.futures.ProcessPoolExecutor() as executor:
         result_info = executor.map(parse_identifier, record_batch_list)
@@ -310,39 +310,39 @@ parser = argparse.ArgumentParser(description='This tool receives a fasta file co
                                              'group out the obtained ORFs, using the identity with or without gaps '
                                              'between them for that, after a muscle alignment, and realising this groups'
                                              ' as all ORFs found for each input sequence.')
-parser.add_argument('-input', default=DEFAULT_PATH, type=str, help='The path to the input file.'
+parser.add_argument('--in', default=DEFAULT_PATH, type=str, help='The path to the input file.'
                                                                        'Default: the example file of 12 "Geminiviridae"'
                                                                        ' alphasatellites.')
-parser.add_argument('-out', default='output/', type=str, help='A output folder name, that will be created '
+parser.add_argument('--out', default='output/', type=str, help='A output folder name, that will be created '
                                                                'if dont exists. Default: a folder named "output" will be'
                                                                ' created for the results.')
-parser.add_argument('-muscle_path', default="Standard", type=str, help='A path to an alternative muscle '
+parser.add_argument('--muscle_path', default="Standard", type=str, help='A path to an alternative muscle '
                                                                         'version. Default: 5.1 at the bin folder.')
-parser.add_argument('-pep_min_size', default=6, type=int, help='The number of amino acids a peptide must '
+parser.add_argument('--pep_min_size', default=6, type=int, help='The number of amino acids a peptide must '
                                                                 'have to be considered valid. Default: 6 aa.')
-parser.add_argument('-alt_codon', default=False, type=bool, help='Use alternative codons when searching '
+parser.add_argument('--alt_codon', default=False, type=bool, help='Use alternative codons when searching '
                                                                   'for the start codon (CTG, GTG, TTG, ATT, ATC). '
                                                                   'Default: False, using ATG only, change to True,'
                                                                  ' but it may take longer to run.')
-parser.add_argument('-use_gaps', action='store_true', default=False, help='Include to use gaps for the '
+parser.add_argument('--use_gaps', action='store_true', default=False, help='Include to use gaps for the '
                                                                            'identity between '
                                                             'proteins. Default: "False", not considering gaps.')
-parser.add_argument('-prot_len_perc', default=0.6, type=float, help="The percentage (in decimals) of the "
+parser.add_argument('--prot_len_perc', default=0.6, type=float, help="The percentage (in decimals) of the "
                                                                      "ORF's length that will be accepted to vary (for "
                                                                      "more or less than the representative) between "
                                                                      "the first found sequence and the others. Default:"
                                                                      " 0.6, which means the a sequence must have more "
                                                                      "or less then 60 percent of the length of the first found "
                                                                      "sequence to be compared to it.")
-parser.add_argument('-identity_threshold', default=0.7, type=float, help='The percentage of similarity, '
+parser.add_argument('--identity_threshold', default=0.7, type=float, help='The percentage of similarity, '
                                                                           'identity, between to ORFs to consider to be '
                                                                           'in the same group. Default: 0.7, which is 70'
                                                                           ' percent of similarity for grouping.')
-parser.add_argument('-nproc', default=cpus_avail, type=int, help='The number of processing units that will'
+parser.add_argument('--nproc', default=cpus_avail, type=int, help='The number of processing units that will'
                                                                   ' be used for parallel processing. Default: the number'
                                                                   ' of available processors.')
 
-parser.add_argument('-comp_seq', default=False, type=bool, help='Define if the complementary sequence, both'
+parser.add_argument('--comp_seq', default=False, type=bool, help='Define if the complementary sequence, both'
                                                                  ' for sense and anti-sense frames, will be shown together'
                                                                  'in the complete output. Default: False, use true to show.')
 
