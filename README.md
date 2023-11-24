@@ -27,7 +27,7 @@ For any suggestions or doubts, please contact me at ruitherarthur@gmail.com.
 
 # Command line options
 
---input: The path to the input file. Defaults to a file containing 12 "Geminiviridae" alphasatellites if not specified.
+--in: The path to the input file. Defaults to a file containing 12 "Geminiviridae" alphasatellites if not specified.
 
 --out: Specifies the output folder name. If the folder doesn't exist, it creates a folder named "output" to store results.
 
