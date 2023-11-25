@@ -348,7 +348,7 @@ parser.add_argument('--comp_seq', default=False, type=bool, help='Define if the 
 
 args = parser.parse_args()
 
-PATH_TO_INPUT_FILE = args.input
+PATH_TO_INPUT_FILE = args.in
 OUTPUT_PATH = args.out
 NEW_MUSCLE_PATH = args.muscle_path
 MIN_PEP_SIZE = args.pep_min_size
