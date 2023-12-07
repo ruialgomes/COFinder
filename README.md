@@ -9,17 +9,17 @@ Despite the emergence of tools employing ML approaches to detect these sORFs, th
 For any suggestions or doubts, please contact me at ruitherarthur@gmail.com.
 
 # Installing and usage
-*  Download the folder “COFinder”, and extract it from the zip file at the desired directory. To run the script open the terminal, and navigate to the extraction directory. With Python3 already installed, inside the folder, you will create a new environment for TensorFlow installation. You can do that by using the command:
+*  Download the folder “COFinder”, and extract it from the zip file at the desired directory. To run the script open the terminal, and navigate to the extraction directory. With Python3 already installed, inside the folder, you will create a new environment for running the tool. You can do that by using the command:
 
-*python -m venv ’environment_name’* for **Windows**. or *python3 -m venv ’environment_name’* for **Unix/Mac**.
+*python -m venv ’environment_name’* for **Windows**.   OR   *python3 -m venv ’environment_name’* for **Unix/Mac**.
 
 *  Where you will change “environment_name” to a name of your preference, like “concret_venv”. Then you need to activate the environment using:
 
-*’environment_name’/Scripts/activate* for **Windows** or *source ’environment_name’/bin/activate* for **Unix/Mac**
+*’environment_name’/Scripts/activate* for **Windows**   OR   *source ’environment_name’/bin/activate* for **Unix/Mac**
 
 *  Then you can use the command line options, with more options below:
 
-*python COFinder_v1.py --in “yourFasta.fasta”* for **Windows** OR *python3 COFinder_v1.py --in “yourFasta.fasta”* for **Unix/Mac**
+*python COFinder_v1.py --in “yourFasta.fasta”* for **Windows**   OR   *python3 COFinder_v1.py --in “yourFasta.fasta”* for **Unix/Mac**
 
 *  When you finish, deactivate the venv with:
 
@@ -33,19 +33,19 @@ For any suggestions or doubts, please contact me at ruitherarthur@gmail.com.
 
 --muscle_path: Path to an alternative muscle version. The default is version 5.1 in the bin folder.
 
---pep_min_size: Minimum number of amino acids required for a valid peptide. Defaults to 6 amino acids.
+--pep_min_size: Minimum number of amino acids required for a valid peptide. Default is 6 amino acids.
 
 --alt_codon: Set to True to use alternative start codons (CTG, GTG, TTG, ATT, ATC). The default is to use only ATG.
 
 --use_gaps: Includes gaps for identity calculation between proteins if used. The default is removing the gaps from.
 
---prot_len_perc: Percentage (in decimals) of the ORF's length accepted for variation compared to the representative sequence. Default: 0.6.
+--prot_len_perc: Percentage (in decimals) of the ORF's length accepted for variation compared to the representative sequence. Default is 0.6 (60% length variation).
 
---identity_threshold: Percentage of similarity required between ORFs to be considered in the same group. Default: 0.7 (70% similarity).
+--identity_threshold: Percentage of similarity required between ORFs to be considered in the same group. Default is 0.7 (70% identity).
 
---nproc: Number of processing units used for parallel processing. Defaults to the number of available processors.
+--nproc: Number of processing units used for parallel processing. Default is the number of available processors.
 
---comp_seq: Determines if the complementary sequence for both sense and anti-sense frames will be shown in the complete output. Default: False. Set to True to show.
+--comp_seq: Determines if the complementary sequence for both sense and anti-sense frames will be shown in the complete output. Default: False. Set to True to show the complementary sequence.
 
 Command line example
 
