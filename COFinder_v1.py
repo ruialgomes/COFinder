@@ -310,7 +310,7 @@ parser = argparse.ArgumentParser(description='This tool receives a fasta file co
                                              'group out the obtained ORFs, using the identity with or without gaps '
                                              'between them for that, after a muscle alignment, and realising this groups'
                                              ' as all ORFs found for each input sequence.')
-parser.add_argument('--in', default=DEFAULT_PATH, type=str, help='The path to the input file.'
+parser.add_argument('--input_file', default=DEFAULT_PATH, type=str, help='The path to the input file.'
                                                                        'Default: the example file of 12 "Geminiviridae"'
                                                                        ' alphasatellites.')
 parser.add_argument('--out', default='output/', type=str, help='A output folder name, that will be created '
@@ -348,7 +348,7 @@ parser.add_argument('--comp_seq', default=False, type=bool, help='Define if the 
 
 args = parser.parse_args()
 
-PATH_TO_INPUT_FILE = args.in
+PATH_TO_INPUT_FILE = args.input_file
 OUTPUT_PATH = args.out
 NEW_MUSCLE_PATH = args.muscle_path
 MIN_PEP_SIZE = args.pep_min_size
