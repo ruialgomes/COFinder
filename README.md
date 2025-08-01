@@ -13,7 +13,7 @@ For any suggestions or doubts, please contact me at ruitherarthur@gmail.com.
 
 *python -m venv ’environment_name’* for **Windows**.   OR   *python3 -m venv ’environment_name’* for **Unix/Mac**.
 
-*  Where you will change “environment_name” to a name of your preference, like “concret_venv”. Then you need to activate the environment using:
+*  Where you will change “environment_name” to a name of your preference, like “cofinder_venv”. Then you need to activate the environment using:
 
 *’environment_name’/Scripts/activate* for **Windows**   OR   *source ’environment_name’/bin/activate* for **Unix/Mac**
 
