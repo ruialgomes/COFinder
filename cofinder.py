@@ -1,13 +1,3 @@
-########################################################################################################################
-#Ruither Arthur Loch Gomes
-#ruitherarthur@gmail.com
-#07/2025
-########################################################################################################################
-#Using a group of similar genomes, the algorithm searches for open reading frames that are conserved among them, using
-# muscle and pairwise alignments.
-########################################################################################################################
-#lIRABRIES
-########################################################################################################################
 import time
 import os
 
@@ -18,8 +8,6 @@ import argparse
 from src.bio_utils import open_fasta, format_sequences
 from src.parse_utils import get_orf_list, compare_all_orfs, save_results
 from src.utils import format_time, create_dirs
-
-########################################################################################################################
 
 cpus_avail = os.cpu_count()
 
